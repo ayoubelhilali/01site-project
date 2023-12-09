@@ -1,0 +1,40 @@
+body{
+    background-color: aqua;
+}
+.nav{
+    height: 80px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .logo {
+    font-size: 20px;
+    padding-left: 10px;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+}
+.nav ul li a:visited{
+    color: white;
+    text-decoration: none;
+    
+}
+.nav ul li {
+    margin: 10px;
+    
+}
+img{
+    width: 500px;
+    height: 250px;
+}
+.header{
+    height: 300px;
+    display: flex;
+    background-color: gray;
+    justify-content: space-between;
+    padding: 20px;
+
+}

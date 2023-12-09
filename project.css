@@ -1,0 +1,260 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 300vh;
+}
+
+#header {
+  height: 80px;
+  background-color: #ffffff;
+  border-bottom: 5px solid #0069fe;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+#header .header-barre {
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+#header .header-barre .logo img {
+  width: 80px;
+}
+#header .header-barre .header-links {
+  display: block;
+  margin: auto 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(38, 10, 196);
+  text-decoration: none;
+  padding: 20px 52px;
+  font-weight: 900;
+  float: left;
+  word-spacing: 30px;
+  background-color: rgb(255, 255, 255);
+  
+}
+#header .header-barre .header-links a{
+  background-color:white;
+  text-decoration: none;
+  color: blue;
+  width: 30px;
+  border-top: 0px;
+  border-bottom: 0px;
+  padding: 23px 7px;
+
+}  
+#header .header-barre .header-links a:hover{
+  border-bottom: 5px solid black;
+}
+
+#header .header-barre .head-Button .learn-button {
+  padding: 10px 22px;
+  font-weight: 900;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+  transition-duration: 1s;
+
+}
+#header .header-barre .head-Button .learn-button:hover{
+  transform: scale(1.1);
+  background-color: rgb(28, 28, 254);
+}
+.dropbtn {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  border: none;
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  top: 55px;
+  right: 35px;
+  background-color: #f1f1f1;
+  width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px black solid;  
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: blue;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {background-color: #ffffff;color: blue;}
+
+.search-icon{
+  color: black;
+  font-size: 1.8em;
+  transition-duration: 0.5s;
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+}
+.search-icon:hover {
+  transform: scale(1.1);
+  color: blue;
+
+} 
+.search-input{
+  position: fixed;
+  height: 50px;
+  border: 3px solid blue;
+  padding: 10px;
+  display: none;
+}
+@media screen and (max-width:967px){
+  .header-links a{
+    display: none;
+  }
+  .learn-button{
+    display: none;
+  }
+  .dropbtn{
+    display: block;
+    position: fixed;
+    right: 5%;
+    top: 20px;
+  }
+  .search-icon{
+    position: fixed;
+    top: 30px;
+    right: 15%;
+  }
+  .search-icon:hover + .search-input{
+    display: block;
+    top: 3%;
+    right: 20%;
+    width: 55%;
+    height: 40px;
+  }
+}
+@media screen and (min-width:967px){
+  .search-icon:hover + .search-input{
+    display: block;
+    top: 13%;
+    width: 60%;
+    right: 20%;
+    left: 20%;
+  }
+}
+
+
+
+
+.main{
+  background-image: url("images/background-01club.jpg");
+  height: 90vh;
+  align-items: center;
+  background-position:center;
+  background-size: cover;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  border: 2px solid #0069fe;
+  display: flex;
+  position: relative;
+
+}
+.main .top-button{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #0069fe;
+  position: fixed;
+  right: 3%;
+  bottom: 9%;
+  font-size: 50px;
+  z-index: 100;
+}
+.main .discover-btn{
+  background-color: white;
+  border-radius: 15px;
+  color: #0069fe;
+  font-size: 1em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.835em 2em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.6s ease;
+}
+.main .discover-btn:hover{
+  font-size: 1.2em;
+  background-color: rgb(207, 207, 220);
+  transform: scale(1.01);
+}
+
+
+.cards{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px #0069fe solid ;
+  height: 27wh;
+}
+.card{
+  background-color: rgb(255, 255, 255);
+  width: 15.25em;
+  box-shadow: 0 5px 25px rgba(1 1 1/15%);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  transition:0.7s ease; 
+  text-align: center;
+  margin-top: 35px;
+}
+.card:active{
+  background-color: rgb(115, 135, 207);
+}
+.card:hover{
+  transform: scale(1.1);
+}
+.icon{
+  color: #0069fe;
+  font-size: 7.5em;
+  text-align: center;
+}
+.card h3{
+  font-size: 1.2em;
+  color: #0069fe;
+  margin: 10px;
+  font-weight: 700;
+}
